@@ -3,8 +3,176 @@ body {
     margin: 20px;
 }
 
-a div {
-    padding: 10px;
-    margin: 10px 0;
+main {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.repo-header {
+    margin: 40px auto 20px auto;
+}
+
+.repo-header h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.repo-header p {
+    color: #666;
+    margin-top: 6px;
+}
+
+.repo-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+}
+
+.repo-actions button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.repo-actions button:hover {
+    background: #f5f5f5;
+}
+
+.tweak-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+h2 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    margin: 0;
+    border: 1px solid;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+    height: auto;
+    min-height: 50px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border-color: #888;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 3px 8px;
+    margin-top: 6px;
     border: 1px solid #ccc;
+    border-radius: 999px;
+    color: #444;
+}
+
+a h3 {
+    margin: 0 0 6px 0;
+}
+
+a p {
+    margin: 4px 0;
+}
+
+a p:last-child {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Tweak Pages */
+.tweak-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.tweak-here h1 {
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+.tweak-here p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.badges span {
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    background: #9f9f9f;
+}
+
+.install-btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.tweak-desc h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.tweak-section {
+    max-width: 800px;
+    margin: 18px auto;
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 14px;
+    padding: 24px 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.tweak-section h2 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.tweak-section p {
+    font-size: 14px;
+    line-height: 1.25;
+    color: #333;
+    margin: 0;
+}
+
+.tweak-section ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.tweak-section li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    color: #333;
 }
