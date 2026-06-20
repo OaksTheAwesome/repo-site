@@ -19,8 +19,10 @@
             <span>Free</span>
         </div>
 
-        <button class="install-btn">Install</button>
-        </div>
+        <button class="install-btn"
+        onclick="window.open('sileo://package/com.oakstheawesome.whatamess')">
+            Install
+        </button>
 
         <div class="tweak-section">
             <div class="tweak-inner">
@@ -101,6 +103,7 @@ const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
 let currentIndex = 0;
+let startX = 0;
 
 function showImage(index) {
     modalImg.classList.add("changing");
@@ -162,6 +165,23 @@ document.addEventListener("keydown", (e) => {
 
     if (e.key === "Escape") {
         modal.classList.remove("open");
+    }
+});
+
+modalImg.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
+
+modalImg.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) < 50) return;
+
+    if (diff > 0) {
+        nextBtn.click();
+    } else {
+        prevBtn.click();
     }
 });
 </script>
