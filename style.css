@@ -13,7 +13,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(24px);
-    transform: scale(1.05);
+    transform: scale(1.1);
     z-index: -2;
     pointer-events: none;
 }
@@ -28,23 +28,50 @@ body::after {
 }
 
 main {
-    max-width: 720px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
+.repo-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.06),
+            transparent 60%
+        );
+    pointer-events: none;
+}
+
 .repo-header {
-    margin: 40px auto 20px auto;
+    max-width: 900px;
+    margin: 40px auto 32px auto;
+    padding: 40px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 24px;
+    box-shadow:
+        0 12px 40px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .repo-header h1 {
-    font-size: 32px;
     margin: 0;
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
 }
 
 .repo-header p {
-    color: #666;
-    margin-top: 6px;
-}
+    margin-top: 8px;
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+}   
 
 .repo-actions {
     margin-top: 14px;
@@ -53,36 +80,142 @@ main {
 }
 
 .repo-actions button {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(0,0,0,0.05);
+    backdrop-filter: blur(16px);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
     cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .repo-actions button:hover {
-    background: #f5f5f5;
+    transform:  translateY(-2px);
+    background: #89eed3;
+    border-color: rgba(5, 255, 193, 0.25);
+}
+
+.repo-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.05);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.75);
+    font-family: monospace;
+    font-size: 12px;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.repo-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.featured-tweak::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.1),
+            transparent 65%
+        );
+    pointer-events: none;
+}
+
+.featured-tweak {
+    max-width: 925px;
+    margin: 0 auto 32px auto;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 12px 40px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+    position: relative;
+}
+
+.featured-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.featured-label {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 10px;
+}
+
+.featured-content h2 {
+    font-size: 38px;
+    color: white;
+    margin: 0 0 12px 0;
+}
+
+.featured-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.75);
+    max-width: 500px;
+}
+
+.featured-tweak img {
+    width: 350px;
+    border-radius: 24px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.featured-tweak:hover img {
+    transform: scale(1.03);
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.35);
 }
 
 .tweak-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
+    gap: 18px;
 }
 
-h2 {
-    margin-top: 24px;
-    margin-bottom: 12px;
-}
+main h2 {
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+}   
 
 .card {
     display: flex;
     flex-direction: column;
-    padding: 14px;
+    padding: 20px;
     margin: 0;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 16px;
     text-decoration: none;
     color: inherit;
@@ -99,7 +232,7 @@ h2 {
 
 .card:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
     box-shadow:
         0 12px 32px rgba(0, 0, 0, 0.25),
         inset 0 1px 0 rgba(255, 255, 255, 0.15);
@@ -107,25 +240,49 @@ h2 {
 
 .badge {
     display: inline-block;
+    background: rgba(0, 0, 0, 0.1);
     font-size: 0.8em;
-    padding: 3px 8px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
+    padding: 3px 10px;
+    align-self: flex-start;
+    margin-left: -2px;
+    margin-top: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 999px;
-    color: #444;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.tweak-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.card-badges {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
 }
 
 a h3 {
+    font-size: 22px;
+    color: white;
     margin: 0 0 6px 0;
 }
 
 a p {
+    font-size: 14px;
+    color: rgba(225,225,225,0.75);
     margin: 4px 0;
 }
 
-a p:last-child {
-    font-size: 0.9em;
-    color: #666;
+footer {
+    margin-top: 48px;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
 }
 
 /* Tweak Pages */
@@ -163,14 +320,14 @@ a p:last-child {
 .tweak-header {
     background: rgba(0,0,0,0.3);
     backdrop-filter: blur(24px);
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 14px;
     padding: 18px;
     margin-bottom: 16px;
     box-shadow:
         0 8px 32px rgba(0,0,0,0.1),
-        inset 0 1px 0 rgba(255,255,255,0.15),
-        inset 0 -1px 0 rgba(255,255,255,0.05);
+        inset 0 1px 0 rgba(255,255,255,0.25),
+        inset 0 -1px 0 rgba(0,0,0,0.05);
 }
 
 .tweak-header h1 {
@@ -200,7 +357,7 @@ a p:last-child {
     font-size: 12px;
     color: #f5f5f5;
     padding: 4px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.15);
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.5);
@@ -213,6 +370,11 @@ a p:last-child {
     background: #89eed3;
     color: black;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.install-btn:hover {
+    transform: translateY(-2px);
 }
 
 .screenshot-row {
@@ -237,11 +399,8 @@ a p:last-child {
 .screenshot {
     flex: 0 0 auto;
     height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    box-shadow:
-        0 8px 32px rgba(0,0,0,0.15),
-        inset 0 1px 0 rgba(255,255,255,0.15);
     overflow: hidden;
     scroll-snap-align: center;
     filter: blur(0.2px);
@@ -374,14 +533,13 @@ a p:last-child {
     margin: 18px auto;
     background: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 14px;
     box-shadow:
         0 8px 32px rgba(0,0,0,0.1),
-        inset 0 1px 0 rgba(255,255,255,0.15),
-        inset 0 -1px 0 rgba(255,255,255,0.05);
+        inset 0 1px 0 rgba(255,255,255,0.2),
+        inset 0 -1px 0 rgba(0,0,0,0.05);
     padding: 24px 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .tweak-section h2 {

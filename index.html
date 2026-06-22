@@ -13,22 +13,57 @@
 
             <div class="repo-actions">
                 <button>Add Repo</button>
-                <button>Browse Tweaks</button>
+
+                <div class="repo-link" onclick="copyRepoUrl()">
+                    https://oakstheawesome.github.io/repo-site/
+                </div>
             </div>
         </header>
 
+        <section class="featured-tweak">
+            <div class="featured-content">
+                <span class="featured-label">FEATURED</span>
+
+                <h2>WhatAMess</h2>
+
+                <p>
+                    A modern Messages customization tweak with
+                    conversation styling, custom layouts,
+                    and extensive personalization.
+                </p>
+
+                <div class="featured-actions">
+                    <button class="install-btn">Get</button>
+                </div>
+            </div>
+
+        <div class="featured-shot">
+            <img
+                src="images/whatamess-preview.png"
+                alt="WhatAMess Screenshot">
+        </div>
+        </section>
+
+
     <main>
-        <h2>Featured Tweaks</h2>
+        <h2>Tweaks</h2>
             <div class="tweak-grid">
                 <a class="card" href="tweaks/WhatAMess.html">
+                    <img class="tweak-icon" src="images/whatamess-icon.png">
                         <h3>WhatAMess</h3>
                         <p>A modern Messages customization tweak.</p>
-                        <span class="badge">iOS 15-17</span>
+                        <div class="card-badges">
+                            <span class="badge">iOS 15-17</span>
+                            <span class="badge">Free</span>
+                        </div>
                 </a>
 
                 <a class="card" href="GettingBy.html">
                         <h3>GettingBy</h3>
                         <p>A port of StandBy to older iOS.</p>
+                        <div class="card-badges">
+                            <span class="badge">Coming Soon</span>
+                        </div>
                 </a>
 
                 <a class="card" href="FakeTweak.html">
@@ -38,6 +73,14 @@
             </div>
 
     </main>
+
+    <script>
+        function copyRepoUrl() {
+            navigator.clipboard.writeText(
+                "https://oakstheawesome.github.io/repo-site/"
+            );
+        }
+    </script>
 
     <footer>
         Made by OaksTheAwesome
