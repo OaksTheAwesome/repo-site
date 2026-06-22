@@ -43,8 +43,6 @@ body::after {
     filter: blur(24px);
     transform: scale(1.3);
     pointer-events: none;
-    will-change: transform;
-    transform: translateZ(0);
 }
 
 main {
