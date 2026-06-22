@@ -8,6 +8,7 @@ body {
     position: relative;
     font-family: Arial, sans-serif;
     height: 100%;
+    margin: 20px;
     min-height: 100dvh;
     overflow-x: hidden;
     overscroll-behavior: none;
@@ -345,9 +346,17 @@ footer {
 ================*/
 
 .tweak-page {
-    max-width: 800px;
+    max-width: 720px;
     margin: 40px auto;
-    padding: 0 16px;
+    padding: 40px 16px;
+}
+
+@media (max-width: 600px) {
+    main,
+    .tweak-page {
+        max-width: 100%;
+        padding: 16px;
+    }
 }
 
 .card::before,
@@ -377,7 +386,7 @@ footer {
     backdrop-filter: blur(24px);
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 14px;
-    padding: 18px;
+    padding: 16px;
     margin-bottom: 16px;
     box-shadow:
         0 8px 32px rgba(0,0,0,0.1),
@@ -446,7 +455,7 @@ footer {
 .screenshot-row {
     overflow-x: auto;
     padding: 0 16px;
-
+    scroll-padding-left: 16px;
     scroll-snap-type: x mandatory;
 }
 
@@ -633,7 +642,7 @@ footer {
 
 .tweak-section p {
     font-size: 14px;
-    line-height: 1.25;
+    line-height: 1.5;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
 }
