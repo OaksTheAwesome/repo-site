@@ -12,10 +12,10 @@ SHA256: 568cb85a5fe2f350a195946013944449cac449a86b23ee8a095e6e1294d10f9e
 Section: Tweaks
 Description: Messy, messy Messages.
 Author: OaksTheAwesome <oaknintendo@gmail.com>
-Homepage: https://oakstheawesometweaks.github.io/repo
-Icon: https://oakstheawesometweaks.github.io/repo/images/whatamess-icon.png
+Homepage: https://oakstheawesome.github.io/repo
+Icon: https://oakstheawesome.github.io/repo/images/whatamess-icon.png
 Name: WhatAMess
 Tags: compatible_min::ios15.0, compatible_max::ios17.0
-Depiction: https://oakstheawesometweaks.github.io/repo/tweaks/WhatAMess.html
-SileoDepiction: https://oakstheawesometweaks.github.io/repo/depictions/com.oakstheawesome.whatamess.json
+Depiction: https://oakstheawesome.github.io/repo/tweaks/WhatAMess.html
+SileoDepiction: https://oakstheawesome.github.io/repo/depictions/com.oakstheawesome.whatamess.json
 

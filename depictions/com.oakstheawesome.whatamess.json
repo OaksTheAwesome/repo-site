@@ -1,7 +1,7 @@
 {
   "minVersion": "0.1",
   "class": "DepictionTabView",
-  "headerImage": "https://oakstheawesometweaks.github.io/repo/images/whatamess-preview.png",
+  "headerImage": "https://oakstheawesome.github.io/repo/images/whatamess-preview.png",
   "tintColor": "#40826D",
   "tabs": [
     {
@@ -13,13 +13,13 @@
           "itemCornerRadius": 8,
           "itemSize": "{160, 346}",
           "screenshots": [
-            { "url": "https://oakstheawesometweaks.github.io/repo/images/1.png", "accessibilityText": "Screenshot" },
-            { "url": "https://oakstheawesometweaks.github.io/repo/images/2.png", "accessibilityText": "Screenshot" },
-            { "url": "https://oakstheawesometweaks.github.io/repo/images/3.png", "accessibilityText": "Screenshot" },
-            { "url": "https://oakstheawesometweaks.github.io/repo/images/4.png", "accessibilityText": "Screenshot" },
-            { "url": "https://oakstheawesometweaks.github.io/repo/images/5.png", "accessibilityText": "Screenshot" },
-            { "url": "https://oakstheawesometweaks.github.io/repo/images/6.png", "accessibilityText": "Screenshot" },
-            { "url": "https://oakstheawesometweaks.github.io/repo/images/7.png", "accessibilityText": "Screenshot" }
+            { "url": "https://oakstheawesome.github.io/repo/images/1.png", "accessibilityText": "Screenshot" },
+            { "url": "https://oakstheawesome.github.io/repo/images/2.png", "accessibilityText": "Screenshot" },
+            { "url": "https://oakstheawesome.github.io/repo/images/3.png", "accessibilityText": "Screenshot" },
+            { "url": "https://oakstheawesome.github.io/repo/images/4.png", "accessibilityText": "Screenshot" },
+            { "url": "https://oakstheawesome.github.io/repo/images/5.png", "accessibilityText": "Screenshot" },
+            { "url": "https://oakstheawesome.github.io/repo/images/6.png", "accessibilityText": "Screenshot" },
+            { "url": "https://oakstheawesome.github.io/repo/images/7.png", "accessibilityText": "Screenshot" }
           ]
         },
         {
