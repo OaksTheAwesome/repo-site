@@ -360,7 +360,7 @@ footer {
 }
 
 .tweak-header {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.15);
     backdrop-filter: blur(24px);
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 14px;
@@ -598,7 +598,7 @@ footer {
 .tweak-section {
     max-width: 800px;
     margin: 18px auto;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.025);
     backdrop-filter: blur(24px);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 14px;
